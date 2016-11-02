@@ -43,6 +43,10 @@ namespace CollectionsApplication
             {
                 Console.Write(c + " ");
             }
-        }
+
+            Console.WriteLine();
+            Console.WriteLine("peek top of stack:");
+            Console.WriteLine(st.Peek());
+         }
     }
 }

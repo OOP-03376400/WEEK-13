@@ -10,34 +10,59 @@ namespace CollectionApplication
         static void Main(string[] args)
         {
             ArrayList al = new ArrayList();                 // สร้าง Object ของ ArrayList
-
+            const int length = 1025;
             Console.WriteLine("Adding some numbers:");
-            al.Add(45);  //เพิ่ม ข้อมูลเข้าไปยัง collection
-            al.Add(78);
-            al.Add(33);
-            al.Add(56);
-            al.Add(12);
-            al.Add(23);
-            al.Add(9);
+            for (int i = 0; i < length; i++)
+            {
+                al.Add(i);
+
+            }
 
             Console.WriteLine("Capacity: {0} ", al.Capacity);   // ใช้ property Capacity
+            Console.WriteLine("Count: {0}", al.Count);          // ใช้ property Count 
+            Console.WriteLine("waste: {0}", al.Capacity - al.Count);          // ใช้ property Count 
+                  
+            Console.ReadKey();
+
+            al.TrimToSize();
+            Console.WriteLine("After trim to size");   // ใช้ property Capacity
+            Console.WriteLine("Capacity: {0} ", al.Capacity);   // ใช้ property Capacity
             Console.WriteLine("Count: {0}", al.Count);          // ใช้ property Count       
+            Console.WriteLine("waste: {0}", al.Capacity - al.Count);          // ใช้ property Count 
+            Console.ReadKey();
+
 
             Console.Write("Content: ");
             foreach (int i in al)
             {
                 Console.Write(i + " ");
             }
-
             Console.WriteLine();
-            Console.Write("Sorted Content: ");
-            al.Sort();                              // ใช้ method Sort()
+
+            Console.Write("Inserted Content: ");
+            al.Insert(0, 2);
+
             foreach (int i in al)
             {
                 Console.Write(i + " ");
             }
             Console.WriteLine();
+
+            Console.Write("remove: ");
+            al.Remove(20);
+
+            foreach (int i in al)
+            {
+                Console.Write(i + " ");
+            }
+            Console.WriteLine();
+
+
             Console.ReadKey();
+
+
+
+
         }
     }
 }

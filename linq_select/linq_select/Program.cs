@@ -9,10 +9,10 @@ namespace Operators
     {
         static void Main(string[] args)
         {
-            List<string> words = new List<string>() { "an", "apple", "a", "day" };
+            List<string> words = new List<string>() { "an", "apple", "pine", "day" };
 
-            var query = from word in words
-                        select word.Substring(0, 1);
+            var query = from word in words   // word = string, words = list of string
+                        select word.Substring(0, 2); // select first char of word
 
             foreach (string s in query)
                 Console.WriteLine(s);

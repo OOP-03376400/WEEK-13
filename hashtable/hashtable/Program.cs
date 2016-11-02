@@ -9,13 +9,13 @@ namespace CollectionsApplication
         {
             Hashtable ht = new Hashtable();
 
-            ht.Add("001", "Zara Ali");
-            ht.Add("002", "Abida Rehman");
-            ht.Add("003", "Joe Holzner");
-            ht.Add("004", "Mausam Benazir Nur");
-            ht.Add("005", "M. Amlan");
-            ht.Add("006", "M. Arif");
-            ht.Add("007", "Ritesh Saikia");
+            ht.Add("001", "Thitima");
+            ht.Add("002", "Chanitnantranukool");
+            ht.Add("003", "Snakepong");
+            ht.Add("004", "Phairote");
+            ht.Add("005", "Thanakorn");
+            ht.Add("006", "Anukorn");
+            ht.Add("007", "Vipapan");
 
             if (ht.ContainsValue("Nuha Ali"))
             {
@@ -29,10 +29,14 @@ namespace CollectionsApplication
             // Get a collection of the keys.
             ICollection key = ht.Keys;
 
-            foreach (string k in key)
-            {
-                Console.WriteLine(k + ": " + ht[k]);
-            }
+            //if (ht.ContainsKey("015"))
+            //{
+                Console.WriteLine(ht["015"]);
+            //}
+            //foreach (string k in key)
+            //{
+            //    Console.WriteLine(k + ": " + ht[k]);
+            //}
 
             Console.ReadKey();
         }

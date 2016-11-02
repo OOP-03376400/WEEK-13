@@ -8,13 +8,12 @@ namespace CollectionsApplication
         static void Main(string[] args)
         {
             SortedList sl = new SortedList();
-
-            sl.Add("001", "Zara Ali");
             sl.Add("002", "Abida Rehman");
             sl.Add("003", "Joe Holzner");
+            sl.Add("001", "Zara Ali");
+            sl.Add("006", "M. Arif");
             sl.Add("004", "Mausam Benazir Nur");
             sl.Add("005", "M. Amlan");
-            sl.Add("006", "M. Arif");
             sl.Add("007", "Ritesh Saikia");
 
             if (sl.ContainsValue("Nuha Ali"))

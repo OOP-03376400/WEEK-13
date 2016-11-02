@@ -9,27 +9,33 @@ namespace CollectionsApplication
         {
             Queue q = new Queue();
 
-            q.Enqueue('A');
-            q.Enqueue('M');
-            q.Enqueue('G');
-            q.Enqueue('W');
+            q.Enqueue("Ovaltine");
+            q.Enqueue("Milo");
+            q.Enqueue("Coco");
+            q.Enqueue("Wine");
 
             Console.WriteLine("Current queue: ");
-            foreach (char c in q) Console.Write(c + " ");
+            foreach (string g in q) Console.Write(g + " ");
 
             Console.WriteLine();
-            q.Enqueue('V');
-            q.Enqueue('H');
+            q.Enqueue("Vita berry");
+            q.Enqueue("Hong tong");
             Console.WriteLine("Current queue: ");
-            foreach (char c in q) Console.Write(c + " ");
+            foreach (string g in q) Console.Write(g + " ");
 
             Console.WriteLine();
             Console.WriteLine("Removing some values ");
-            char ch = (char)q.Dequeue();
-            Console.WriteLine("The removed value: {0}", ch);
-            ch = (char)q.Dequeue();
-            Console.WriteLine("The removed value: {0}", ch);
-
+            string str = (string)q.Dequeue();
+            Console.WriteLine("The removed value: {0}", str);
+            str= (string)q.Dequeue();
+            Console.WriteLine("The removed value: {0}", str);
+            str = (string)q.Dequeue();
+            Console.WriteLine("The removed value: {0}", str);
+            str = (string)q.Dequeue();
+            Console.WriteLine("The removed value: {0}", str);
+            str = (string)q.Dequeue();
+            Console.WriteLine("The removed value: {0}", str);
+ 
             Console.ReadKey();
         }
     }
